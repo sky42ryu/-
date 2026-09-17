@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>니맘대로 마케팅</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-badge">Marketing Game</span>
+          <h1>니맘대로 마케팅</h1>
+        </div>
+
+        <div class="header-actions">
+          <button id="randomBtn" class="ghost-btn">랜덤 시나리오 추천</button>
+          <button id="backBtn" class="ghost-btn hidden">이전</button>
+        </div>
+      </header>
+
+      <main class="game-shell">
+        <div class="progress">
+          <div class="progress-step active" data-step="scenario">1. 시나리오</div>
+          <div class="progress-step" data-step="method">2. 방법</div>
+          <div class="progress-step" data-step="plan">3. 방안</div>
+          <div class="progress-step" data-step="result">4. 결과</div>
+        </div>
+
+        <section id="scenarioStep" class="page-step active">
+          <div class="step-header">
+            <p class="step-label">Step 1</p>
+            <h2>마케팅 상황 선택</h2>
+          </div>
+          <div id="scenarioGrid" class="scenario-grid"></div>
+        </section>
+
+        <section id="methodStep" class="page-step">
+          <div class="step-header">
+            <p class="step-label">Step 2</p>
+            <h2>마케팅 방법 선택</h2>
+          </div>
+          <div id="scenarioSummary" class="summary-card"></div>
+          <div id="methodGrid" class="card-grid"></div>
+        </section>
+
+        <section id="planStep" class="page-step">
+          <div class="step-header">
+            <p class="step-label">Step 3</p>
+            <h2>디테일한 방안 선택</h2>
+          </div>
+          <div id="planSummary" class="summary-card"></div>
+          <div id="planGrid" class="card-grid"></div>
+        </section>
+
+        <section id="resultStep" class="page-step">
+          <div class="step-header">
+            <p class="step-label">Step 4</p>
+            <h2>효과 예측</h2>
+          </div>
+          <div id="resultSummary" class="summary-card"></div>
+
+          <div class="score-box">
+            <label for="scoreInput">10점 만점에 몇 점일까요?</label>
+            <div class="score-row">
+              <input id="scoreInput" type="number" min="1" max="10" value="8" />
+              <button id="resultBtn" class="primary-btn">결과 확인</button>
+            </div>
+          </div>
+
+          <div id="resultBox" class="result-box">
+            <h3>결과 확인</h3>
+            <p>선택한 전략과 점수를 입력한 뒤 결과를 확인해보세요.</p>
+          </div>
+          <section id="caseExamples" class="case-examples" aria-live="polite"></section>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
